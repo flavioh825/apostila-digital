@@ -6,10 +6,6 @@ class DeviseTokenAuthCreateUsers < ActiveRecord::Migration[5.2]
       t.string :provider, :null => false, :default => "email"
       t.string :uid, :null => false, :default => ""
 
-      t.string :name
-      t.string :last_name
-      t.string :kind
-
       ## Database authenticatable
       t.string :encrypted_password, :null => false, :default => ""
 
@@ -34,9 +30,11 @@ class DeviseTokenAuthCreateUsers < ActiveRecord::Migration[5.2]
 
       ## User Info
       t.string :name
+      t.string :last_name
       t.string :nickname
       t.string :image
       t.string :email
+      t.string :kind
 
       ## Tokens
       t.text :tokens
